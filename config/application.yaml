@@ -3,107 +3,171 @@
 ##########################################
 application:
 
-  input:
+input:
+  # HageZi Ultimate
+  - name: HageZi-Ultimate
+    path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
+    type: easylist # AdBlock Plus/AdGuard format
 
-    - name: 'Hagezi - 📕 Multi ULTIMATE - Aggressive Protection'
-      path: 'https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt'
-      type: hosts
+  # 1Hosts Xtra
+  - name: 1Hosts-Xtra
+    path: https://badmojr.github.io/1Hosts/Xtra/adblock.txt
+    type: easylist # AdBlock Plus/AdGuard format
 
-    - name: '1Hosts - Xtra'
-      path: 'https://badmojr.github.io/1Hosts/Xtra/adblock.txt'
-      type: hosts
-    
-    - name: 'Shalla's Blocklists'
-      path: 'http://www.shallalist.de/Downloads/shallalist.tar.gz'
-      type: hosts
+  # Shallalist (NOTE: This is a compressed .tar.gz file for a huge blocklist, 
+  # which the AD Filter Subscriber tool might not natively handle directly as a simple text subscription. 
+  # You might need to manually extract and host the list, or exclude it.)
+  # - name: Shallalist
+  #   path: http://www.shallalist.de/Downloads/shallalist.tar.gz
+  #   type: ??? # Skipping this one as the tool likely needs a raw text list URL.
 
-    - name: 'OISD Big List'
-      path: 'https://big.oisd.nl/'
-      type: hosts
+  # OISD Big
+  - name: OISD-Big
+    path: https://big.oisd.nl/
+    type: easylist # AdBlock Plus/AdGuard format
 
-    - name: 'badblock - 🔥 BadBlock+ (ABP)'
-      path: 'https://badblock.celenity.dev/abp/badblock_plus.txt'
-      type: hosts
+  # BadBlock Plus
+  - name: Badblock-Plus
+    path: https://badblock.celenity.dev/abp/badblock_plus.txt
+    type: easylist # AdBlock Plus/AdGuard format
 
-    - name: 'Energized Unified | Adware, Malware and Porn Unified'
-      path: 'https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/EnergizedUnified/energized/hosts'
-      type: hosts
+  # Energized Hosts
+  - name: Energized-Hosts
+    path: https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/EnergizedUnified/energized/hosts
+    type: hosts # Hosts format
 
-    - name: 'AdGuard Base filter'
-      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt'
-      type: hosts
+  # DandelionSprout Compilation IPs (NOTE: This is a GitHub *HTML* link, not a *raw* link. 
+  # The tool needs the raw content link. The actual raw link should be used.)
+  # Corrected raw link:
+  - name: DandelionSprout-AGH-IPs
+    path: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationListIPs.txt
+    type: hosts # Likely hosts format for IPs
 
-    - name: 'AdGuard DNS Popup Hosts filter'
-      path: 'https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/refs/heads/gh-pages/Filters/adguard_popup_filter.txt'
-      type: hosts
+  # AdGuard Base Filter (Adservers)
+  - name: AdGuard-Base-Adservers
+    path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt
+    type: easylist
 
-    - name: 'AdGuard Base filter - first-party servers'
-      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt'
-      type: hosts
+  # AdGuard Popup Filter
+  - name: AdGuard-Popup-Filter
+    path: https://raw.githubusercontent.com/AdGuardTeam/AdGuardSDNSFilter/refs/heads/gh-pages/Filters/adguard_popup_filter.txt
+    type: easylist
 
-    - name: 'AdGuard Tracking Protection filter - mobile trackers'
-      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt'
-      type: hosts
+  # AdGuard Hostlist Filter 1
+  - name: AdGuard-Hostlist-1
+    path: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    type: easylist
 
-    - name: 'AdGuard Mobile Ads filter'
-      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt'
-      type: hosts
+  # AdGuard Base Filter (First-party Adservers)
+  - name: AdGuard-Base-FirstParty
+    path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt
+    type: easylist
 
-    - name: 'AdGuard Social Media filter'
-      path: 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt'
-      type: hosts
+  # AdGuard Spyware Filter (Mobile)
+  - name: AdGuard-Spyware-Mobile
+    path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt
+    type: easylist
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # AdGuard Mobile Filter (Adservers)
+  - name: AdGuard-Mobile-Adservers
+    path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
+    type: easylist
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # AdGuard Social Filter
+    - name: AdGuard-Social-Filter
+      path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt
+      type: easylist
+# BarbBlock Hosts File
+  - name: BarbBlock
+    path: https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Someone Who Cares Hosts
+  - name: SomeoneWhoCares
+    path: https://someonewhocares.org/hosts/hosts
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # DRSDavidSoft Iranian Unwanted
+  - name: DRSDavidSoft-Iranian
+    path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # FadeMind 2o7Net Hosts
+  - name: FadeMind-2o7Net
+    path: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Firebog Admiral
+  - name: Firebog-Admiral
+    path: https://v.firebog.net/hosts/Admiral.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Firebog NeoHosts Basic
+  - name: Firebog-NeoHosts
+    path: https://v.firebog.net/hosts/neohostsbasic.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Goooler 1024 Hosts
+  - name: Goooler-1024
+    path: https://raw.githubusercontent.com/Goooler/1024_hosts/refs/heads/master/hosts
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # hblock Adblock Hosts
+  - name: hblock-Adblock
+    path: https://hblock.molinero.dev/hosts_adblock.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Hostsfile.org Hosts
+  - name: Hostsfile-org
+    path: https://www.hostsfile.org/Downloads/hosts.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Developer Dan AMP Hosts Extended
+  - name: DeveloperDan-AMP
+    path: https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Macedonian Pi-hole Blocklist
+  - name: Macedonian-Blocklist
+    path: https://raw.githubusercontent.com/cchevy/macedonian-pi-hole-blocklist/master/hosts.txt
+    type: hosts
 
-    - name: 'blank'
-      path: 'blank'
-      type: hosts
+  # Winhelp 2002 MVPS Hosts
+  # NOTE: The link appears twice, the second is a duplicate.
+  - name: MVPS-Hosts
+    path: http://winhelp2002.mvps.org/hosts.txt
+    type: hosts
+
+  # PGL Yoyo Adservers
+  # NOTE: This uses a complex query string, but the output format should be hosts.
+  - name: PGL-Yoyo-Adservers
+    path: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&startdate%5Bday%5D=06&startdate%5Bmonth%5D=06&startdate%5Byear%5D=2003&useip=0.0.0.0
+    type: hosts
+
+  # Polish Filters Team KADhosts
+  - name: PolishFilters-KADhosts
+    path: https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+    type: hosts
+
+  # StevenBlack Hosts (Standard)
+  - name: StevenBlack-Standard
+    path: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+    type: hosts
+
+  # VeleSila Yhosts
+  - name: VeleSila-Yhosts
+    path: https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts
+    type: hosts
+
+  # Firebog W3KBL Static
+  - name: Firebog-W3KBL
+    path: https://v.firebog.net/hosts/static/w3kbl.txt
+    type: hosts
+
+  # Vokins Yhosts
+  - name: Vokins-Yhosts
+    path: https://raw.githubusercontent.com/vokins/yhosts/master/hosts
+    type: hosts
 
     - name: 'blank'
       path: 'blank'
