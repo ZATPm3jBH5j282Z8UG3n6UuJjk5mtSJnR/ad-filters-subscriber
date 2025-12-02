@@ -37,160 +37,84 @@ application:
       path: 'https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/refs/heads/gh-pages/Filters/adguard_popup_filter.txt'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'AdGuard Base filter - first-party servers'
+      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
-      type: hosts
-
-    - name: 'black'
-      path: 'black'
+    - name: 'blank'
+      path: 'blank'
       type: hosts
 
   output:
