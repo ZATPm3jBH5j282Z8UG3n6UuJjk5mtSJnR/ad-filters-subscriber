@@ -76,92 +76,8 @@ ad-filters-subscriber:
           type: hosts
 
         ##########################################
-        ## !!! Other Hosts Lists.
+        ## !!! EasyList
         ##########################################
-        - name: SomeoneWhoCares
-          path: https://someonewhocares.org/hosts/hosts
-          type: hosts
-        - name: DRSDavidSoft-Iranian
-          path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt
-          type: hosts
-        - name: FadeMind-2o7Net
-          path: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
-          type: hosts
-        - name: Firebog-Admiral
-          path: https://v.firebog.net/hosts/Admiral.txt
-          type: hosts
-        - name: Firebog-NeoHosts
-          path: https://v.firebog.net/hosts/neohostsbasic.txt
-          type: hosts
-        - name: Goooler-1024
-          path: https://raw.githubusercontent.com/Goooler/1024_hosts/refs/heads/master/hosts
-          type: hosts
-        - name: hblock-Adblock
-          path: https://hblock.molinero.dev/hosts_adblock.txt
-          type: hosts
-        - name: Hostsfile-org
-          path: https://www.hostsfile.org/Downloads/hosts.txt
-          type: hosts
-        - name: DeveloperDan-AMP
-          path: https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
-          type: hosts
-        - name: Macedonian-Blocklist
-          path: https://raw.githubusercontent.com/cchevy/macedonian-pi-hole-blocklist/master/hosts.txt
-          type: hosts
-        - name: MVPS-Hosts
-          path: http://winhelp2002.mvps.org/hosts.txt
-          type: hosts
-        - name: PGL-Yoyo-Adservers
-          path: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&startdate%5Bday%5D=06&startdate%5Bmonth%5D=06&startdate%5Byear%5D=2003&useip=0.0.0.0
-          type: hosts
-        - name: PolishFilters-KADhosts
-          path: https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
-          type: hosts
-        - name: StevenBlack-Standard
-          path: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-          type: hosts
-        - name: VeleSila-Yhosts
-          path: https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts
-          type: hosts
-        - name: Firebog-W3KBL
-          path: https://v.firebog.net/hosts/static/w3kbl.txt
-          type: hosts
-        - name: Vokins-Yhosts
-          path: https://raw.githubusercontent.com/vokins/yhosts/master/hosts
-          type: hosts
-        - name: HageZi-TIF
-          path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
-          type: easylist
-        - name: HageZi-Fake
-          path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt
-          type: easylist
-        - name: HageZi-DynDNS
-          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt
-          type: easylist
-        - name: Mandiant-APT1
-          path: https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt
-          type: hosts
-        - name: PGL-Yoyo-Simplified
-          path: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
-          type: hosts
-        - name: Firebog-AdguardDNS
-          path: https://v.firebog.net/hosts/AdguardDNS.txt
-          type: easylist
-        - name: NextDNS-CNAME
-          path: https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
-          type: hosts
-        - name: Adguard-CNAME-Combined
-          path: https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers.txt
-          type: easylist
-        - name: NSABlocklist-Hosts
-          path: https://github.com/CHEF-KOCH/NSABlocklist/raw/master/HOSTS
-          type: hosts
-        - name: Badblock-NSA-NG
-          path: https://badblock.celenity.dev/abp/nsa-blocklist-ng.txt
-          type: easylist
-        - name: ABP-Anti-CV
-          path: https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
-          type: easylist
         - name: EasyList-Main
           path: https://easylist.to/easylist/easylist.txt
           type: easylist
@@ -207,6 +123,10 @@ ad-filters-subscriber:
         - name: Firebog-EasyList
           path: https://v.firebog.net/hosts/Easylist.txt
           type: easylist
+
+        ##########################################
+        ## !!! Language/Region Lists.
+        ##########################################
         - name: AG-Hostlists-25
           path: https://cdn.jsdelivr.net/gh/adguardteam/HostlistsRegistry@main/assets/filter_25.txt
           type: easylist
@@ -371,6 +291,94 @@ ad-filters-subscriber:
           type: easylist
         - name: AG-Spanish-Filter-Reg
           path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_9_Spanish/filter.txt
+          type: easylist
+
+        ##########################################
+        ## !!! Other Hosts Lists.
+        ##########################################
+        - name: SomeoneWhoCares
+          path: https://someonewhocares.org/hosts/hosts
+          type: hosts
+        - name: DRSDavidSoft-Iranian
+          path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt
+          type: hosts
+        - name: FadeMind-2o7Net
+          path: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
+          type: hosts
+        - name: Firebog-Admiral
+          path: https://v.firebog.net/hosts/Admiral.txt
+          type: hosts
+        - name: Firebog-NeoHosts
+          path: https://v.firebog.net/hosts/neohostsbasic.txt
+          type: hosts
+        - name: Goooler-1024
+          path: https://raw.githubusercontent.com/Goooler/1024_hosts/refs/heads/master/hosts
+          type: hosts
+        - name: hblock-Adblock
+          path: https://hblock.molinero.dev/hosts_adblock.txt
+          type: hosts
+        - name: Hostsfile-org
+          path: https://www.hostsfile.org/Downloads/hosts.txt
+          type: hosts
+        - name: DeveloperDan-AMP
+          path: https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
+          type: hosts
+        - name: Macedonian-Blocklist
+          path: https://raw.githubusercontent.com/cchevy/macedonian-pi-hole-blocklist/master/hosts.txt
+          type: hosts
+        - name: MVPS-Hosts
+          path: http://winhelp2002.mvps.org/hosts.txt
+          type: hosts
+        - name: PGL-Yoyo-Adservers
+          path: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&startdate%5Bday%5D=06&startdate%5Bmonth%5D=06&startdate%5Byear%5D=2003&useip=0.0.0.0
+          type: hosts
+        - name: PolishFilters-KADhosts
+          path: https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+          type: hosts
+        - name: StevenBlack-Standard
+          path: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+          type: hosts
+        - name: VeleSila-Yhosts
+          path: https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts
+          type: hosts
+        - name: Firebog-W3KBL
+          path: https://v.firebog.net/hosts/static/w3kbl.txt
+          type: hosts
+        - name: Vokins-Yhosts
+          path: https://raw.githubusercontent.com/vokins/yhosts/master/hosts
+          type: hosts
+        - name: HageZi-TIF
+          path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
+          type: easylist
+        - name: HageZi-Fake
+          path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt
+          type: easylist
+        - name: HageZi-DynDNS
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt
+          type: easylist
+        - name: Mandiant-APT1
+          path: https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt
+          type: hosts
+        - name: PGL-Yoyo-Simplified
+          path: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
+          type: hosts
+        - name: Firebog-AdguardDNS
+          path: https://v.firebog.net/hosts/AdguardDNS.txt
+          type: easylist
+        - name: NextDNS-CNAME
+          path: https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
+          type: hosts
+        - name: Adguard-CNAME-Combined
+          path: https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers.txt
+          type: easylist
+        - name: NSABlocklist-Hosts
+          path: https://github.com/CHEF-KOCH/NSABlocklist/raw/master/HOSTS
+          type: hosts
+        - name: Badblock-NSA-NG
+          path: https://badblock.celenity.dev/abp/nsa-blocklist-ng.txt
+          type: easylist
+        - name: ABP-Anti-CV
+          path: https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
           type: easylist
 
 
