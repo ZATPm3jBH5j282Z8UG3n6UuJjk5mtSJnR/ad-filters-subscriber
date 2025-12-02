@@ -12,8 +12,187 @@ application:
     - name: '1Hosts - Xtra'
       path: 'https://badmojr.github.io/1Hosts/Xtra/adblock.txt'
       type: hosts
+    
+    - name: 'Shalla's Blocklists'
+      path: 'http://www.shallalist.de/Downloads/shallalist.tar.gz'
+      type: hosts
 
-  #输出配置
+    - name: 'OISD Big List'
+      path: 'https://big.oisd.nl/'
+      type: hosts
+
+    - name: 'badblock - 🔥 BadBlock+ (ABP)'
+      path: 'https://badblock.celenity.dev/abp/badblock_plus.txt'
+      type: hosts
+
+    - name: 'Energized Unified | Adware, Malware and Porn Unified'
+      path: 'https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/EnergizedUnified/energized/hosts'
+      type: hosts
+
+    - name: 'AdGuard Base filter'
+      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt'
+      type: hosts
+
+    - name: 'AdGuard DNS Popup Hosts filter'
+      path: 'https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/refs/heads/gh-pages/Filters/adguard_popup_filter.txt'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
+    - name: 'black'
+      path: 'black'
+      type: hosts
+
   output:
     #文件头配置，将自动作为注释添加至每个规则文件开始
     #可使用占位符 ${name}、${type}、${desc} 以及 ${date} (当前日期)、${total} (规则总数)
