@@ -1,2 +1,89 @@
-# 参考 `application-example.yaml` 并在处添加订阅规则，请注意缩进
-# Refer to `application-example.yaml` and add subscription rules there，please note the indentation
+##########################################
+## !!! ALL in ONE Rule
+##########################################
+application:
+
+  input:
+
+    - name: 'Hagezi - 📕 Multi ULTIMATE - Aggressive Protection'
+      path: 'https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt'
+      type: hosts
+
+    - name: '1Hosts - Xtra'
+      path: 'https://badmojr.github.io/1Hosts/Xtra/adblock.txt'
+      type: hosts
+
+  #输出配置
+  output:
+    #文件头配置，将自动作为注释添加至每个规则文件开始
+    #可使用占位符 ${name}、${type}、${desc} 以及 ${date} (当前日期)、${total} (规则总数)
+    file_header: |
+      ADFS AdBlock ${type}
+      Last Modified: ${date}
+      Total Size: ${total}
+      Homepage: https://github.com/fordes123/ad-filters-subscriber/
+
+    #输出规则文件列表 （！注意缩进，且每个类型只能输出一个文件）
+    files:
+      - name: easylist.txt     #必要参数: 文件名
+        type: easylist         #必要参数: 文件类型: easylist、dnsmasq、clash、smartdns、hosts
+        file_header:           #可选参数: 文件头配置，将自动作为注释添加至每个规则文件开始 (此处优先于 output.file_header)
+        desc: 'ADFS EasyList'  #可选参数: 文件描述，可在file_header中通过 ${} 中使用
+        filter:
+          - basic              #基本规则，不包含任何控制、匹配符号, 可以转换为 hosts
+          - wildcard           #通配规则，仅使用通配符
+          - unknown            #其他规则，如使用了正则、高级修饰符号的规则，这些规则目前无法转换为其他格式
+
+        rule:                  #可选参数: 限定此文件使用的规则源，如果不指定则使用 input 中的所有规则源
+          - Subscription 1
+          - Subscription 2
+
+      - name: dns.txt
+        type: easylist
+        filter:
+          - basic
+          - wildcard
+
+      - name: dnsmasq.txt
+        type: dnsmasq
+
+      - name: clash.yaml
+        type: clash
+
+      - name: smartdns.txt
+        type: smartdns
+
+      - name: hosts.txt
+        type: hosts
+
+
+  # 程序运行配置（可选）
+  # ！删除即使用默认配置
+  config:
+
+    expected_quantity: 2000000  #预期规则数量
+    fault_tolerance: 0.001 #容错率
+    warn_limit: 6 #警告阈值, 原始规则长度小于该值时会输出警告日志
+
+    # 域名检测，启用时将进行解析以验证域名有效性
+    # ！开启此功能可能导致处理时间大幅延长
+    # ！仅支持特定规则，具体原因请查看项目主页说明
+    domain-detect:
+      enable: false   # 是否启用
+      timeout: 2000   # 查询超时（毫秒）
+      concurrency: 10 # 并发查询数
+      cache-ttl-min: 600            # 缓存最小TTL（秒）
+      cache-ttl-max: 86400          # 缓存最大TTL（秒）
+      cache-negative-ttl: 300       # 失败结果缓存TTL（秒）
+      provider:       # 使用的 DNS 服务器，仅支持 IP，多个之间具备优先级; 为空则使用默认DNS
+        - 223.5.5.5
+
+    # 排除指定内容
+    # 在解析结束后，规则内容命中此列表将直接认定为无效
+    exclude:
+      - "www.example.org"
+
+    # 通过文件收集程序认定无效的规则，用于排查问题
+    tracking:
+      enable: true
+      path: logs/tracking.list
