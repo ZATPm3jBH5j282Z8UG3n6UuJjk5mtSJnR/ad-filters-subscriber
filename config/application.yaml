@@ -41,16 +41,16 @@ application:
       path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt'
       type: hosts
 
-    - name: 'blank'
-      path: 'blank'
+    - name: 'AdGuard Tracking Protection filter - mobile trackers'
+      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/mobile.txt'
       type: hosts
 
-    - name: 'blank'
-      path: 'blank'
+    - name: 'AdGuard Mobile Ads filter'
+      path: 'https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt'
       type: hosts
 
-    - name: 'blank'
-      path: 'blank'
+    - name: 'AdGuard Social Media filter'
+      path: 'https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt'
       type: hosts
 
     - name: 'blank'
