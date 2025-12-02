@@ -4,6 +4,9 @@
 application:
 
 input:
+##########################################
+## !!! Big merge Lists.
+##########################################
   # HageZi Ultimate
   - name: HageZi-Ultimate
     path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
@@ -43,6 +46,9 @@ input:
     path: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationListIPs.txt
     type: hosts # Likely hosts format for IPs
 
+##########################################
+## !!! AdGuard Lists.
+##########################################
   # AdGuard Base Filter (Adservers)
   - name: AdGuard-Base-Adservers
     path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt
@@ -77,7 +83,10 @@ input:
   - name: AdGuard-Social-Filter
     path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Social/filter.txt
     type: easylist
-    
+
+##########################################
+## !!! uBlock Lists.
+##########################################
   # uBlock Origin Unbreak
   - name: UBO-Unbreak
     path: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt
@@ -108,10 +117,33 @@ input:
     path: https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt
     type: hosts
 
-  # Someone Who Cares Hosts
+##########################################
+## !!! Dan_Pollock' Someone Who Cares Hosts.
+##########################################
   - name: SomeoneWhoCares
     path: https://someonewhocares.org/hosts/hosts
     type: hosts
+
+  - name: SomeoneWhoCares
+    path: https://someonewhocares.org/hosts/hosts
+    type: hosts
+
+  - name: SomeoneWhoCares
+    path: https://someonewhocares.org/hosts/hosts
+    type: hosts
+
+  - name: SomeoneWhoCares
+    path: https://someonewhocares.org/hosts/hosts
+    type: hosts
+
+  - name: SomeoneWhoCares
+    path: https://someonewhocares.org/hosts/hosts
+    type: hosts
+
+  - name: SomeoneWhoCares
+    path: https://someonewhocares.org/hosts/hosts
+    type: hosts
+
 
   # DRSDavidSoft Iranian Unwanted
   - name: DRSDavidSoft-Iranian
