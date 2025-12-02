@@ -3,7 +3,7 @@ ad-filters-subscriber:
     source:
       urls:
         ##########################################
-        ## !!! BIG MERGE LISTS (EasyList/Adblock/DNS formats)
+        ## !!! CORE / BIG MERGE LISTS (EasyList/Adblock/DNS formats)
         ##########################################
         - name: HageZi-Ultimate
           path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
@@ -17,6 +17,9 @@ ad-filters-subscriber:
         - name: HageZi-TIF
           path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
           type: easylist
+        - name: HageZi-Light
+          path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt
+          type: easylist
         - name: OISD-Big
           path: https://big.oisd.nl/
           type: easylist
@@ -28,9 +31,6 @@ ad-filters-subscriber:
           type: easylist
         - name: AntiAd-EasyList
           path: https://anti-ad.net/easylist.txt
-          type: easylist
-        - name: Fanboy-CookieMonster
-          path: https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
           type: easylist
         - name: AntiAd-Domains
           path: https://anti-ad.net/domains.txt
@@ -48,6 +48,7 @@ ad-filters-subscriber:
           path: https://v.firebog.net/hosts/static/w3kbl.txt
           type: hosts
 
+        ---
         ##########################################
         ## !!! EASYLIST & PRIVACY CORE
         ##########################################
@@ -72,7 +73,14 @@ ad-filters-subscriber:
         - name: ABP-Anti-CV
           path: https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
           type: easylist
+        - name: EasyList-AntiAdblock-Main
+          path: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+          type: easylist
+        - name: Fanboy-CookieMonster
+          path: https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
+          type: easylist
 
+        ---
         ##########################################
         ## !!! UBLOCK ORIGIN ASSETS
         ##########################################
@@ -91,7 +99,14 @@ ad-filters-subscriber:
         - name: UBO-Filters
           path: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
           type: easylist
+        - name: UBO-Privacy-Min
+          path: https://ublockorigin.github.io/uAssetsCDN/filters/privacy.min.txt
+          type: easylist
+        - name: UBO-Filters-Min
+          path: https://ublockorigin.pages.dev/filters/filters.min.txt
+          type: easylist
 
+        ---
         ##########################################
         ## !!! ADGUARD OFFICIAL FILTERS
         ##########################################
@@ -119,10 +134,62 @@ ad-filters-subscriber:
         - name: AG-Tracking-Mobile
           path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/TrackingFilter/sections/mobile.txt
           type: easylist
-        - name: Adguard-CNAME-Combined
+        - name: AG-CNAME-Combined
           path: https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers.txt
           type: easylist
+        - name: AG-Spyware-Tracking-FirstParty
+          path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers_firstparty.txt
+          type: easylist
+        - name: AG-Spyware-Tracking-Servers
+          path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/SpywareFilter/sections/tracking_servers.txt
+          type: easylist
+        - name: AG-Cryptominers
+          path: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/cryptominers.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Base
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Useful
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_10_Useful/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-TrackParam
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Spyware
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Annoyances
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Annoyances-Cookies
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_18_Annoyances_Cookies/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Annoyances-Popups
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_19_Annoyances_Popups/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Annoyances-MobileApp
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_20_Annoyances_MobileApp/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Annoyances-Widgets
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_22_Annoyances_Widgets/filter.txt
+          type: easylist
+        - name: AG-FiltersRegistry-Annoyances-Other
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_21_Annoyances_Other/filter.txt
+          type: easylist
+        - name: AG-Russian-Filter-Reg
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_1_Russian/filter.txt
+          type: easylist
+        - name: AG-German-Filter-Reg
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_6_German/filter.txt
+          type: easylist
+        - name: AG-Dutch-Filter-Reg
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_8_Dutch/filter.txt
+          type: easylist
+        - name: AG-Chinese-Filter-Reg
+          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
+          type: easylist
 
+        ---
         ##########################################
         ## !!! HOSTS FILE COLLECTIONS
         ##########################################
@@ -144,17 +211,41 @@ ad-filters-subscriber:
         - name: StevenBlack-Hosts
           path: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
           type: hosts
+        - name: StevenBlack-Fakenews-Only
+          path: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-only/hosts
+          type: hosts
+        - name: StevenBlack-Gambling-Only
+          path: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling-only/hosts
+          type: hosts
+        - name: StevenBlack-Social-Only
+          path: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social-only/hosts
+          type: hosts
         - name: MVPS-Hosts
           path: http://winhelp2002.mvps.org/hosts.txt
           type: hosts
         - name: DeveloperDan-AMP
           path: https://www.github.developerdan.com/hosts/lists/amp-hosts-extended.txt
           type: hosts
+        - name: DeveloperDan-Facebook-Extended
+          path: https://www.github.developerdan.com/hosts/lists/facebook-extended.txt
+          type: hosts
+        - name: DevDan-Ads-Tracking-Extended
+          path: https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+          type: hosts
+        - name: DevDan-Tracking-Aggressive
+          path: https://www.github.developerdan.com/hosts/lists/tracking-aggressive-extended.txt
+          type: hosts
         - name: Energized-Hosts
           path: https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/EnergizedUnified/energized/hosts
           type: hosts
         - name: Energized-Porn
           path: https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/extensions/porn/hosts
+          type: hosts
+        - name: Energized-Ad-Hosts
+          path: https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/EnergizedAd/energized/hosts
+          type: hosts
+        - name: Energized-Porn-Hosts
+          path: https://raw.githubusercontent.com/EnergizedProtection/EnergizedHosts/master/EnergizedPorn/energized/hosts
           type: hosts
         - name: PGL-Yoyo-Simplified
           path: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext&useip=0.0.0.0
@@ -183,7 +274,7 @@ ad-filters-subscriber:
         - name: Vokins-Yhosts
           path: https://raw.githubusercontent.com/vokins/yhosts/master/hosts
           type: hosts
-        - name: NextDNS-CNAME
+        - name: NextDNS-CNAME-Domains
           path: https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains
           type: hosts
         - name: tiuxo-hosts
@@ -195,12 +286,174 @@ ad-filters-subscriber:
         - name: HostsVN-Main
           path: https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
           type: hosts
+        - name: Sinfonietta-Social-Hosts
+          path: https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/social-hosts
+          type: hosts
+        - name: Yhonay-Antipopads
+          path: https://raw.githubusercontent.com/Yhonay/antipopads/master/hosts
+          type: hosts
+        - name: Adaway-Hosts
+          path: https://adaway.org/hosts.txt
+          type: hosts
+        - name: ShadowWhisperer-Ads
+          path: https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads
+          type: hosts
+        - name: Sysctl-Cameleon
+          path: http://sysctl.org/cameleon/hosts.win
+          type: hosts
+        - name: Hostsfile-Mine-Nu
+          path: https://hostsfile.mine.nu/hosts0.txt
+          type: hosts
+        - name: NFZ-Hosts-Full
+          path: https://hosts.nfz.moe/full/hosts
+          type: hosts
+        - name: ArthurGeron-YT-Hosts
+          path: https://raw.githubusercontent.com/arthurgeron/blockYTAds/master/hosts.txt
+          type: hosts
+        - name: AnudeepND-YT-Blacklist
+          path: https://raw.githubusercontent.com/anudeepND/youtubeadsblacklist/master/hosts.txt
+          type: hosts
+        - name: Tekintian-Mobile-Hosts
+          path: https://raw.githubusercontent.com/tekintian/hosts_ads_block/master/mobile/hosts
+          type: hosts
+        - name: JDlingyu-Ad-Wars
+          path: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+          type: hosts
+        - name: AnudeepND-Facebook
+          path: https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt
+          type: hosts
+        - name: AnudeepND-Adservers
+          path: https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+          type: hosts
+        - name: AdAway-Hosts-Master
+          path: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+          type: hosts
+        - name: Hblock-Molinero-Hosts
+          path: https://hblock.molinero.xyz/hosts
+          type: hosts
+        - name: HostsFile-Net-AdServers
+          path: https://hosts-file.net/ad_servers.txt
+          type: hosts
+        - name: HostsFile-Net-EMD
+          path: https://hosts-file.net/emd.txt
+          type: hosts
+        - name: HostsFile-Net-EXP
+          path: https://hosts-file.net/exp.txt
+          type: hosts
+        - name: HostsFile-Net-GRM
+          path: https://hosts-file.net/grm.txt
+          type: hosts
+        - name: HostsFile-Net-HJK
+          path: https://hosts-file.net/hjk.txt
+          type: hosts
+        - name: HostsFile-Net-MMT
+          path: https://hosts-file.net/mmt.txt
+          type: hosts
+        - name: HostsFile-Net-WRZ
+          path: https://hosts-file.net/wrz.txt
+          type: hosts
+        - name: Azet12-KADhosts
+          path: https://raw.githubusercontent.com/azet12/KADhosts/master/KADhosts.txt
+          type: hosts
 
+        ---
         ##########################################
-        ## !!! SPECIFIC / REGIONAL / UTILITY LISTS
+        ## !!! WINDOWS & NATIVE TRACKING
+        ##########################################
+        - name: WindowsSpyBlocker-Hosts-Extra
+          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt
+          type: hosts
+        - name: WindowsSpyBlocker-Hosts-IPv6-Spy
+          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/hosts-ipv6-spy.txt
+          type: hosts
+        - name: WindowsSpyBlocker-Hosts-Spy
+          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/hosts-spy.txt
+          type: hosts
+        - name: WindowsSpyBlocker-Hosts-Update
+          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/hosts-update.txt
+          type: hosts
+        - name: NextDNS-Native-Roku
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
+          type: hosts
+        - name: NextDNS-Native-Huawei
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+          type: hosts
+        - name: NextDNS-Native-Apple
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+          type: hosts
+        - name: NextDNS-Native-Alexa
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
+          type: hosts
+        - name: NextDNS-Native-Windows
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+          type: hosts
+        - name: NextDNS-Native-Sonos
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+          type: hosts
+        - name: NextDNS-Native-Samsung
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
+          type: hosts
+        - name: NextDNS-Native-Xiaomi
+          path: https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+          type: hosts
+        - name: HageZi-Native-Amazon
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.amazon.txt
+          type: hosts
+        - name: HageZi-Native-Apple
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.apple.txt
+          type: hosts
+        - name: HageZi-Native-Huawei
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.huawei.txt
+          type: hosts
+        - name: HageZi-Native-LGWebOS
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.lgwebos.txt
+          type: hosts
+        - name: HageZi-Native-WinOffice
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.winoffice.txt
+          type: hosts
+        - name: HageZi-Native-Oppo-Realme
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.oppo-realme.txt
+          type: hosts
+        - name: HageZi-Native-Roku
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.roku.txt
+          type: hosts
+        - name: HageZi-Native-Samsung
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.samsung.txt
+          type: hosts
+        - name: HageZi-Native-Tiktok
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.tiktok.txt
+          type: hosts
+        - name: HageZi-Native-Tiktok-Extended
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.tiktok.extended.txt
+          type: hosts
+        - name: HageZi-Native-Vivo
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.vivo.txt
+          type: hosts
+        - name: HageZi-Native-Xiaomi
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.xiaomi.txt
+          type: hosts
+        - name: Brave-Firstparty
+          path: https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt
+          type: easylist
+        - name: Brave-IOS-Specific
+          path: https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt
+          type: easylist
+
+        ---
+        ##########################################
+        ## !!! SPECIFIC / REGIONAL / ANNOYANCE LISTS
         ##########################################
         - name: DRSDavidSoft-Iranian
           path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/unwanted-iranian.txt
+          type: hosts
+        - name: DRSDavidSoft-Search-Blacklist
+          path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/search-blacklist.txt
+          type: hosts
+        - name: DRSDavidSoft-Adservers-Trackers
+          path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/adservers-and-trackers.txt
+          type: hosts
+        - name: DRSDavidSoft-Fake-Domains
+          path: https://raw.githubusercontent.com/DRSDavidSoft/additional-hosts/master/domains/blacklist/fake-domains.txt
           type: hosts
         - name: PolishFilters-KADhosts
           path: https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
@@ -208,22 +461,173 @@ ad-filters-subscriber:
         - name: FiltersHeroes-KADhosts
           path: https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt
           type: easylist
-        - name: AG-Russian-Filter-Reg
-          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_1_Russian/filter.txt
-          type: easylist
-        - name: AG-German-Filter-Reg
-          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_6_German/filter.txt
-          type: easylist
-        - name: AG-Dutch-Filter-Reg
-          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_8_Dutch/filter.txt
-          type: easylist
-        - name: AG-Chinese-Filter-Reg
-          path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
-          type: easylist
         - name: Liste-FR
           path: https://easylist-downloads.adblockplus.org/liste_fr.txt
           type: easylist
+        - name: HageZi-Gambling
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/gambling.txt
+          type: easylist
+        - name: HageZi-Social
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/social.txt
+          type: easylist
+        - name: HageZi-NoSafeSearch
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/nosafesearch.txt
+          type: easylist
+        - name: HageZi-PopupAds
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/popupads.txt
+          type: easylist
+        - name: Adavoid-Ultimate-Privacy
+          path: https://filters.adavoid.org/ultimate-privacy-filter.txt
+          type: easylist
+        - name: Firebog-Easyprivacy
+          path: https://v.firebog.net/hosts/Easyprivacy.txt
+          type: easylist
+        - name: Quidsup-Notrack-Annoyance
+          path: https://gitlab.com/quidsup/notrack-annoyance-blocklist/raw/master/notrack-annoyance.txt
+          type: easylist
+        - name: Fanboy-Annoyance
+          path: https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
+          type: easylist
+        - name: IDontCareAboutCookies
+          path: https://www.i-dont-care-about-cookies.eu/abp/
+          type: easylist
+        - name: NoAppDownload
+          path: https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt
+          type: easylist
+        - name: Adavoid-Ultimate-Ad
+          path: https://filters.adavoid.org/ultimate-ad-filter.txt
+          type: easylist
+        - name: YousList-Main
+          path: https://raw.githubusercontent.com/yous/YousList/master/youslist.txt
+          type: easylist
+        - name: CJX-Annoyance
+          path: https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt
+          type: easylist
+        - name: Xinggsf-MV
+          path: https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt
+          type: easylist
+        - name: Damengzhu-JiekouAD
+          path: https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
+          type: easylist
+        - name: AWAvenue-Ads-Rule-Main
+          path: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/AWAvenue-Ads-Rule.txt
+          type: easylist
+        - name: Spam404-Adblock-List
+          path: https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
+          type: easylist
+        - name: Disconnect-Simple-Ad
+          path: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+          type: easylist
+        - name: Jerryn70-GoodbyeAds-AdBlock
+          path: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt
+          type: easylist
+        - name: GoodbyeAds-YouTube-Filter
+          path: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt
+          type: easylist
+        - name: GoodbyeAds-Spotify-Extension
+          path: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt
+          type: easylist
+        - name: GoodbyeAds-Samsung-Extension
+          path: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt
+          type: easylist
+        - name: GoodbyeAds-Xiaomi-Extension
+          path: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt
+          type: easylist
+        - name: Badblock-DOH
+          path: https://badblock.celenity.dev/abp/doh.txt
+          type: easylist
+        - name: Badblock-Data-Brokers
+          path: https://badblock.celenity.dev/abp/data-brokers.txt
+          type: easylist
+        - name: Badblock-Monitoring
+          path: https://badblock.celenity.dev/abp/monitoring.txt
+          type: easylist
+        - name: Badblock-DRM
+          path: https://badblock.celenity.dev/abp/drm.txt
+          type: easylist
+        - name: Badblock-Crap
+          path: https://badblock.celenity.dev/abp/crap.txt
+          type: easylist
+        - name: Badblock-Adobe
+          path: https://badblock.celenity.dev/abp/adobe.txt
+          type: easylist
+        - name: Badblock-Facebook
+          path: https://badblock.celenity.dev/abp/facebook.txt
+          type: easylist
+        - name: Badblock-Gaming
+          path: https://badblock.celenity.dev/abp/gaming.txt
+          type: easylist
+        - name: Badblock-Google
+          path: https://badblock.celenity.dev/abp/google.txt
+          type: easylist
+        - name: Badblock-Amazon
+          path: https://badblock.celenity.dev/abp/amazon.txt
+          type: easylist
+        - name: Badblock-Annoyances
+          path: https://badblock.celenity.dev/abp/annoyances.txt
+          type: easylist
+        - name: Badblock-Apple
+          path: https://badblock.celenity.dev/abp/apple.txt
+          type: easylist
+        - name: Badblock-Brave
+          path: https://badblock.celenity.dev/abp/brave.txt
+          type: easylist
+        - name: Badblock-Yahoo
+          path: https://badblock.celenity.dev/abp/yahoo.txt
+          type: easylist
+        - name: Badblock-Yandex
+          path: https://badblock.celenity.dev/abp/yandex.txt
+          type: easylist
+        - name: Badblock-Xiaomi
+          path: https://badblock.celenity.dev/abp/xiaomi.txt
+          type: easylist
+        - name: Badblock-Sentry
+          path: https://badblock.celenity.dev/abp/sentry.txt
+          type: easylist
+        - name: Badblock-Tiktok
+          path: https://badblock.celenity.dev/abp/tiktok.txt
+          type: easylist
+        - name: Badblock-Unsafe
+          path: https://badblock.celenity.dev/abp/unsafe.txt
+          type: easylist
+        - name: Badblock-Unity
+          path: https://badblock.celenity.dev/abp/unity.txt
+          type: easylist
+        - name: Badblock-Twitter
+          path: https://badblock.celenity.dev/abp/twitter.txt
+          type: easylist
+        - name: Badblock-LG
+          path: https://badblock.celenity.dev/abp/lg.txt
+          type: easylist
+        - name: Badblock-Oracle
+          path: https://badblock.celenity.dev/abp/oracle.txt
+          type: easylist
+        - name: Badblock-Radar
+          path: https://badblock.celenity.dev/abp/radar.txt
+          type: easylist
+        - name: Badblock-Samsung
+          path: https://badblock.celenity.dev/abp/samsung.txt
+          type: easylist
+        - name: Badblock-Plausible
+          path: https://badblock.celenity.dev/abp/plausible.txt
+          type: easylist
+        - name: Badblock-Nvidia
+          path: https://badblock.celenity.dev/abp/nvidia.txt
+          type: easylist
+        - name: Badblock-Microsoft
+          path: https://badblock.celenity.dev/abp/microsoft.txt
+          type: easylist
+        - name: Badblock-Mozilla
+          path: https://badblock.celenity.dev/abp/mozilla.txt
+          type: easylist
+        - name: Badblock-Matomo
+          path: https://badblock.celenity.dev/abp/matomo.txt
+          type: easylist
+        - name: Badblock-Huawei
+          path: https://badblock.celenity.dev/abp/huawei.txt
+          type: easylist
 
+        ---
         ##########################################
         ## !!! FADEMIND HOSTS.EXTRAS
         ##########################################
@@ -278,22 +682,165 @@ ad-filters-subscriber:
         - name: FadeMind-WindowsSpyBlocker-UPDATE
           path: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/WindowsSpyBlocker-UPDATE/hosts
           type: hosts
+        - name: FadeMind-StreamingAds
+          path: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/StreamingAds/hosts
+          type: hosts
 
+        ---
         ##########################################
-        ## !!! WINDOWS SPY BLOCKER
+        ## !!! MOBILE / CNAME / RAY HOSTS
         ##########################################
-        - name: WindowsSpyBlocker-Hosts-Extra
-          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/extra.txt
+        - name: ray-AdguardCNAME
+          path: https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardCNAME.txt
           type: hosts
-        - name: WindowsSpyBlocker-Hosts-IPv6-Spy
-          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/hosts-ipv6-spy.txt
+        - name: ray-AdguardCNAMEAds
+          path: https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardCNAMEAds.txt
           type: hosts
-        - name: WindowsSpyBlocker-Hosts-Spy
-          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/hosts-spy.txt
+        - name: ray-AdguardCNAMEClickthroughs
+          path: https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardCNAMEClickthroughs.txt
           type: hosts
-        - name: WindowsSpyBlocker-Hosts-Update
-          path: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/hosts-update.txt
+        - name: ray-AdguardCNAMEMicrosites
+          path: https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardCNAMEMicrosites.txt
           type: hosts
+        - name: ray-EasyPrivacy3rdParty
+          path: https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/EasyPrivacy3rdParty.txt
+          type: hosts
+        - name: ray-EasyPrivacySpecific
+          path: https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/EasyPrivacySpecific.txt
+          type: hosts
+        - name: JamieMansfield-Minecraft-Tracking
+          path: https://raw.githubusercontent.com/jamiemansfield/minecraft-hosts/master/lists/tracking.txt
+          type: hosts
+
+        ---
+        ##########################################
+        ## !!! CRYPTO MINING BLOCKERS
+        ##########################################
+        - name: FadeMind-CoinBlockerList
+          path: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/CoinBlockerList/hosts
+          type: hosts
+        - name: ZeroDot1-CoinBlocker-Browser
+          path: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
+          type: hosts
+        - name: ZeroDot1-CoinBlocker-Hosts
+          path: https://zerodot1.gitlab.io/CoinBlockerLists/hosts
+          type: hosts
+        - name: HoshSadiq-Adblock-Nocoin
+          path: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+          type: hosts
+        - name: Firebog-Prigent-Crypto
+          path: https://v.firebog.net/hosts/Prigent-Crypto.txt
+          type: hosts
+
+        ---
+        ##########################################
+        ## !!! MALWARE, SCAM, PHISHING, & SPAM
+        ##########################################
+        - name: URLhaus-Hostfile
+          path: https://urlhaus.abuse.ch/downloads/hostfile/
+          type: hosts
+        - name: ZeusTracker-DomainBlocklist
+          path: https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist
+          type: hosts
+        - name: Zonefiles-Compromised-Live
+          path: https://zonefiles.io/f/compromised/domains/live/
+          type: hosts
+        - name: SSL-BBLCK-Hosts
+          path: https://ssl.bblck.me/blacklists/hosts-file.txt
+          type: hosts
+        - name: MitchellKrogza-BaddBoyz-Hosts
+          path: https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts
+          type: hosts
+        - name: Cyberhost-Malware
+          path: https://lists.cyberhost.uk/malware.txt
+          type: hosts
+        - name: Dawsey21-Adblock-List
+          path: https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt
+          type: easylist
+        - name: Disconnect-Simple-Malvertising
+          path: https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
+          type: easylist
+        - name: Disconnect-Simple-Malware
+          path: https://s3.amazonaws.com/lists.disconnect.me/simple_malware.txt
+          type: easylist
+        - name: Matomo-Referrer-Spam
+          path: https://raw.githubusercontent.com/matomo-org/referrer-spam-list/master/spammers.txt
+          type: hosts
+        - name: HageZi-Hoster
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/hoster.txt
+          type: easylist
+        - name: HageZi-Spam-TLDS
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt
+          type: easylist
+        - name: HageZi-Fake-Domains
+          path: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/fake.txt
+          type: easylist
+        - name: MalwareDomains-Immortal
+          path: http://malwaredomains.lehigh.edu/files/immortal_domains.txt
+          type: hosts
+        - name: DandelionSprout-AntiMalware-AGH
+          path: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
+          type: easylist
+        - name: MalwareDomainList-Hosts
+          path: http://www.malwaredomainlist.com/hostslist/hosts.txt
+          type: hosts
+        - name: UltimateHostsBlacklist-Mahakala
+          path: https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/adblock.mahakala.is/master/output/hosts/ACTIVE/hosts
+          type: hosts
+        - name: Quidsup-Notrack-Malware
+          path: https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt
+          type: easylist
+        - name: Quidsup-Notrack-Blocklist
+          path: https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
+          type: easylist
+        - name: PhishingArmy-Extended
+          path: https://phishing.army/download/phishing_army_blocklist_extended.txt
+          type: hosts
+        - name: MalwareFilter-Phishing-AGH
+          path: https://malware-filter.gitlab.io/malware-filter/phishing-filter-agh.txt
+          type: easylist
+        - name: RedFlagDomains
+          path: https://dl.red.flag.domains/red.flag.domains.txt
+          type: hosts
+        - name: DurableNapkin-ScamBlock-Hosts
+          path: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt
+          type: hosts
+        - name: USOM-URL-List
+          path: https://www.usom.gov.tr/url-list.txt
+          type: hosts
+        - name: DandelionSprout-AntiMalware-Main
+          path: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Anti-Malware%20List.txt
+          type: easylist
+        - name: Matomo-Referrer-Spam-Blacklist
+          path: https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt
+          type: hosts
+        - name: Firebog-Prigent-Malware
+          path: https://v.firebog.net/hosts/Prigent-Malware.txt
+          type: hosts
+        - name: Firebog-Prigent-Ads
+          path: https://v.firebog.net/hosts/Prigent-Ads.txt
+          type: hosts
+        - name: MalwareFilter-URLhaus-AGH
+          path: https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh.txt
+          type: easylist
+        - name: MitchellKrogza-Hacked-Malware
+          path: https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts
+          type: hosts
+        - name: DurableNapkin-ScamBlock-AdGuard
+          path: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+          type: easylist
+        - name: Firebog-RPiList-Phishing
+          path: https://v.firebog.net/hosts/RPiList-Phishing.txt
+          type: hosts
+        - name: Firebog-RPiList-Malware
+          path: https://v.firebog.net/hosts/RPiList-Malware.txt
+          type: hosts
+        - name: RooneyMcNibNug-SNAFU
+          path: https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
+          type: hosts
+        - name: Spam404-Main-Blacklist
+          path: https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+          type: easylist
 
     output:
       file_header: |
